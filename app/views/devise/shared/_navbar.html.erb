@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar_1">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><%= image_tag "LOGO.png", height: 30 %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/products">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/resenas">Reseñas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/chat">Chat</a>
+      </li>
+    </ul>
+      <ul class="nav nav-pills">
+        <% if Current.usuario %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><%= image_tag "carro.png", height: 30 %></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Cuenta</a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link disabled">Logged as <%= Current.usuario.email %></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="info_us">Info. de cuenta</a></li>
+              <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+            </ul>
+          </li>
+          <%= button_to "Logout", logout_path, method: :delete, class: "btn" %>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><%= image_tag "carro.png", height: 30 %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/sign_in">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/sign_up">Registrarse</a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
