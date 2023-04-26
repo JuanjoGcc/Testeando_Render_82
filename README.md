@@ -1,24 +1,6 @@
-# README
+# 2023-1-grupo-82
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# La pagina se encuentra en https://sprint0.onrender.com
+# El archivo en pdf con los relatos de usarios esta en el main /docs
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

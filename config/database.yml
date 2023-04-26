@@ -7,11 +7,11 @@ default: &default
 
 development:
   <<: *default
-  database: proyecto_development
+  database: <nombre proyecto>_development
 
 test:
   <<: *default
-  database: proyecto_test
+  database: <nombre proyecto>_test
 
 production:
   <<: *default
